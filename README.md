@@ -11,7 +11,7 @@ This repo contains a complete Django implementation of the **Facilities** module
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
+Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 python manage.py migrate
