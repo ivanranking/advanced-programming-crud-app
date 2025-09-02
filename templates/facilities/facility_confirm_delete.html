@@ -1,0 +1,10 @@
+{% extends "facilities/base.html" %}
+{% block content %}
+  <h1 class="h4">Delete Facility</h1>
+  <p>Are you sure you want to delete <strong>{{ object.name }}</strong>?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger" type="submit">Yes, delete</button>
+    <a class="btn btn-secondary" href="{% url 'facilities:detail' object.pk %}">Cancel</a>
+  </form>
+{% endblock %}

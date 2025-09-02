@@ -1,0 +1,31 @@
+<form method="get" class="row g-2 align-items-end mb-3">
+  <div class="col-md-3">
+    <label class="form-label">Search</label>
+    <input type="text" name="q" value="{{ q }}" class="form-control" placeholder="name, desc, capability, location">
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">Type</label>
+    <select name="type" class="form-select">
+      <option value="">Any</option>
+      {% for val,label in types %}
+        <option value="{{ val }}" {% if val == type %}selected{% endif %}>{{ label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">Partner</label>
+    <input type="text" name="partner" value="{{ partner }}" class="form-control" placeholder="e.g. UIRI">
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">Location</label>
+    <input type="text" name="location" value="{{ location }}" class="form-control" placeholder="e.g. Kampala">
+  </div>
+  <div class="col-md-2">
+    <label class="form-label">Capability</label>
+    <input type="text" name="capability" value="{{ capability }}" class="form-control" placeholder="e.g. CNC">
+  </div>
+  <div class="col-md-1 d-grid">
+    <button class="btn btn-primary">Apply</button>
+  </div>
+  <input type="hidden" name="sort" value="{{ sort }}">
+</form>
